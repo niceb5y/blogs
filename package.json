@@ -4,7 +4,8 @@
   "workspaces": [
     "niceb5y-blog",
     "seungho-dev",
-    "common"
+    "common",
+    "gatsby-theme-n21"
   ],
   "dependencies": {
     "gatsby-image": "^3.7.1",

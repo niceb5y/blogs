@@ -4,7 +4,7 @@ import ScrollBooster from 'scrollbooster'
 import * as styles from './header.module.scss'
 import { Site, CategoriesGroup } from '../entities'
 
-const Header = () => {
+const Header = ({ children }: { children?: JSX.Element }) => {
   const data: {
     site: Site
     categoriesGroup: CategoriesGroup
@@ -68,11 +68,7 @@ const Header = () => {
       </Link>
       <div ref={viewport}>
         <ul>
-          <li>
-            <Link to="/about" className="nav-About" activeClassName="active">
-              About
-            </Link>
-          </li>
+          {children}
           {data.categoriesGroup.group.map((elem) => (
             <li key={elem.fieldValue}>
               <Link

@@ -1,5 +1,5 @@
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from 'gatsby-theme-n21/src/components/layout'
+import SEO from 'gatsby-theme-n21/src/components/seo'
 import * as styles from './about.module.scss'
 
 const About = () => (

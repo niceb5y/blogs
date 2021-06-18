@@ -1,4 +1,4 @@
-const generateConfig = require('common/gatsby/config')
+const generateConfig = require('common/utils/generateConfig')
 
 const config = {
   title: 'niceb5y blog',

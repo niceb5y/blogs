@@ -135,5 +135,6 @@ module.exports = (config, dirname) => ({
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
+    `gatsby-theme-n21`,
   ],
 })
