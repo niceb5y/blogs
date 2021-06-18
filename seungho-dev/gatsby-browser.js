@@ -1,2 +1,2 @@
-require('prism-theme-one-dark/prism-onedark.css')
-require('./src/global.scss')
+require('common/styles/global.scss')
+require('common/gatsby/browser.js')

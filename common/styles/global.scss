@@ -21,6 +21,16 @@ body {
  */
 
 $category_scheme: (
+  // blog.niceb5y.net
+  'Camera': #f44336,
+  'Dev': #e91e63,
+  'Game': #9c27b0,
+  'Life': #3f51b5,
+  'Movie': #1e88e5,
+  'Music': #00838f,
+  'Tech': #43a047,
+  'Travel': #fb8c00,
+  /// seungho.dev
   'About': #f44336,
   'Awesome': #e91e63,
   'News': #9c27b0,
@@ -28,7 +38,7 @@ $category_scheme: (
   '___3': #1e88e5,
   '___4': #00838f,
   '___5': #43a047,
-  '___6': #fb8c00,
+  '___6': #fb8c00
 );
 
 @each $color, $value in $category_scheme {

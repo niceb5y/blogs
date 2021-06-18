@@ -1,2 +1,2 @@
-require('prismjs/themes/prism-okaidia.css')
-require('./src/global.scss')
+require('common/styles/global.scss')
+require('common/gatsby/browser.js')
