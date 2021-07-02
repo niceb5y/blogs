@@ -1,4 +1,11 @@
 /*
+ * Import
+ */
+
+@import url('https://cdnx.shk.im/fonts/pretendard/300.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+/*
  * Reset
  */
 
@@ -7,14 +14,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', sans-serif;
+  font-weight: 300;
 }
-
-/*
- * Import
- */
-
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Noto+Sans+KR&display=swap');
 
 /*
  * Color
