@@ -1,0 +1,47 @@
+.menu {
+  @apply fixed z-20 w-80 left-0 top-0 bottom-0 bg-white dark:bg-gray-900 shadow-lg p-4;
+}
+
+.menuWrapper {
+  @apply flex flex-col h-full overflow-y-auto;
+}
+
+.listTitle {
+  @apply py-2 px-4 text-xl dark:text-gray-600;
+}
+
+.list {
+  @apply flex-grow;
+}
+
+.list li {
+  @apply list-none py-2 px-4 text-lg;
+}
+
+.listLink {
+  @apply text-gray-400 hover:underline hover:text-primary-500;
+}
+
+.listLinkActive {
+  @apply text-gray-800 dark:text-gray-300 font-medium;
+}
+
+.about {
+  @apply text-right;
+}
+
+.header {
+  @apply text-right;
+}
+
+.title {
+  @apply pb-4;
+}
+
+.title img {
+  @apply w-56 mx-auto;
+}
+
+.bg {
+  @apply fixed z-10 inset-0 backdrop-filter backdrop-brightness-75 backdrop-blur;
+}

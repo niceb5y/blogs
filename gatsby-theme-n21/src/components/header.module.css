@@ -1,0 +1,15 @@
+.root {
+  @apply h-16 flex;
+}
+
+.brand {
+  @apply flex-grow text-center;
+}
+
+.brandLink {
+  @apply inline-block;
+}
+
+.brand img {
+  @apply h-12 my-2;
+}

@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import * as styles from './404.module.scss'
+import * as styles from './404.module.css'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
@@ -13,7 +13,7 @@ const PageNotFound = () => (
         </span>
       </h1>
       <p>요청하신 페이지를 찾을 수 없습니다.</p>
-      <Link to="/">메인으로</Link>
+      <Link to="/">메인으로 가기</Link>
     </div>
   </Layout>
 )

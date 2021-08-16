@@ -45,6 +45,7 @@ const PageCategories = ({
         pageCurrent={pageCurrent}
         pageTotal={pageTotal}
         pagePrefix={`/categories/${categories}`}
+        title={categories}
       />
     </Layout>
   )

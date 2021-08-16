@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import * as styles from './footer.module.scss'
+import * as styles from './footer.module.css'
 import { Site } from '../entities'
 
 const Footer = () => {

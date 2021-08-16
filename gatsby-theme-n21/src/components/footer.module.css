@@ -1,0 +1,12 @@
+.root {
+  @apply mt-8 pb-16;
+  margin-top: 32px;
+}
+
+.root p {
+  @apply text-center;
+}
+
+.root hr {
+  @apply border-gray-200 pt-8;
+}

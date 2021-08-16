@@ -1,0 +1,47 @@
+.pageTitle {
+  @apply text-lg text-gray-500 mb-5;
+}
+
+.card {
+  @apply mb-10;
+}
+
+.card .title {
+  @apply mt-4 text-lg font-medium;
+}
+
+.card .title a {
+  @apply no-underline hover:underline;
+}
+
+.card p {
+  @apply m-0;
+}
+
+.card .category {
+  @apply text-primary-500 hover:underline mr-2;
+}
+
+.card .date {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+.pagination {
+  @apply text-center mt-4;
+}
+
+.pagination span {
+  @apply mx-4;
+}
+
+.disabled {
+  @apply pointer-events-none cursor-not-allowed;
+}
+
+.icon {
+  @apply inline-block;
+}
+
+.disabled .icon {
+  @apply text-gray-300 dark:text-gray-600;
+}

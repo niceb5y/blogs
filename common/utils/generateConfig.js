@@ -10,6 +10,9 @@ module.exports = (config, dirname) => ({
     },
     copyright: config.copyright,
   },
+  flags: {
+    THE_FLAG: false,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -134,7 +137,7 @@ module.exports = (config, dirname) => ({
     `gatsby-plugin-twitter`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-sass`,
+    `gatsby-plugin-postcss`,
     `gatsby-theme-n21`,
   ],
 })

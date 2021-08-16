@@ -1,5 +1,6 @@
 import { Link, graphql } from 'gatsby'
-import * as styles from './posts.module.scss'
+import { ChevronUp, ChevronDown } from 'react-feather'
+import * as styles from './posts.module.css'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import SchemaBreadcrumbList from '../components/schema/breadcrumblist'
@@ -26,7 +27,7 @@ const PagePost = ({
   const { previous, next } = pageContext
 
   return (
-    <Layout>
+    <Layout siteTitleInParagraph>
       <SEO
         title={postTitle}
         description={postDescription}
@@ -56,12 +57,12 @@ const PagePost = ({
           <h1>{postTitle}</h1>
           <p>
             <Link
-              className={`cat-${postCategories}`}
+              className={styles.category}
               to={`/categories/${postCategories}/`}
             >
               {postCategories}
             </Link>
-            {postDate}
+            <span className={styles.date}>{postDate}</span>
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -69,7 +70,7 @@ const PagePost = ({
       <div className={styles.footer}>
         {next && (
           <div>
-            다음 글 -{' '}
+            <ChevronUp className={styles.icon} aria-label="다음 글" />
             <Link to={next.frontmatter.url} rel="next">
               {next.frontmatter.title}
             </Link>
@@ -77,7 +78,7 @@ const PagePost = ({
         )}
         {previous && (
           <div>
-            이전 글 -{' '}
+            <ChevronDown className={styles.icon} aria-label="이전 글" />
             <Link to={previous.frontmatter.url} rel="prev">
               {previous.frontmatter.title}
             </Link>

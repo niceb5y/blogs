@@ -1,0 +1,15 @@
+.root {
+  @apply my-36;
+}
+
+.root h1 {
+  @apply text-5xl mb-4;
+}
+
+.root p {
+  @apply mb-2;
+}
+
+.root a {
+  @apply text-primary-500 hover:underline font-medium;
+}

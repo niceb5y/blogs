@@ -1,12 +1,12 @@
 import Layout from 'gatsby-theme-n21/src/components/layout'
 import SEO from 'gatsby-theme-n21/src/components/seo'
-import * as styles from './about.module.scss'
+import * as styles from './about.module.css'
 
 const About = () => (
   <Layout>
     <SEO title="About" description="Seungho Kim - Software Developer" />
     <div className={styles.cardBlock}>
-      <div className={styles.cardWrapper}>
+      <div>
         <div className={styles.card}>
           <img src="/profile.jpg" />
           <h1>Seungho Kim</h1>

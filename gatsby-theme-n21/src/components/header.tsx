@@ -1,10 +1,17 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import ScrollBooster from 'scrollbooster'
-import * as styles from './header.module.scss'
+import { Menu } from 'react-feather'
+import * as styles from './header.module.css'
 import { Site, CategoriesGroup } from '../entities'
+import SideMenu from './sidemenu'
 
-const Header = ({ children }: { children?: JSX.Element }) => {
+interface HeaderProps {
+  siteTitleInParagraph: boolean
+}
+
+const Header = ({ siteTitleInParagraph }: HeaderProps) => {
+  const [sideMenuVisible, setSideMenuVisible] = useState(false)
+
   const data: {
     site: Site
     categoriesGroup: CategoriesGroup
@@ -18,70 +25,40 @@ const Header = ({ children }: { children?: JSX.Element }) => {
       site {
         siteMetadata {
           title
+          copyright
         }
       }
     }
   `)
-  const debounce = useRef<number>(null) as React.MutableRefObject<number>
-  const viewport = useRef<HTMLDivElement>(null)
-  const [scrollAvailable, setScrollAvailable] = useState(false)
 
-  useEffect(() => {
-    if (!scrollAvailable) return
-    const sb = new ScrollBooster({
-      viewport: viewport.current,
-      scrollMode: 'transform',
-      direction: 'horizontal',
-    })
-    return () => {
-      sb.setPosition({ x: 0 })
-      sb.destroy()
-    }
-  }, [scrollAvailable])
-
-  useEffect(() => {
-    const resizeHandler = () => {
-      if (!viewport.current) return
-      if (debounce.current) {
-        window.clearTimeout(debounce.current)
-      }
-      const { scrollWidth, clientWidth } = viewport.current
-      debounce.current = window.setTimeout(() => {
-        setScrollAvailable(scrollWidth !== clientWidth)
-      }, 250)
-    }
-    window.addEventListener('resize', resizeHandler)
-    return () => window.removeEventListener('resize', resizeHandler)
-  }, [])
-
-  useEffect(() => {
-    if (!viewport.current) return
-    setScrollAvailable(
-      viewport.current.scrollWidth !== viewport.current.clientWidth
-    )
-  }, [viewport.current])
+  const { title, copyright } = data.site.siteMetadata
 
   return (
     <nav className={styles.root}>
-      <Link className={styles.brand} to="/">
-        {data.site.siteMetadata.title}
-      </Link>
-      <div ref={viewport}>
-        <ul>
-          {children}
-          {data.categoriesGroup.group.map((elem) => (
-            <li key={elem.fieldValue}>
-              <Link
-                className={`nav-${elem.fieldValue}`}
-                activeClassName="active"
-                to={`/categories/${elem.fieldValue}/`}
-              >
-                {elem.fieldValue}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <button
+        onClick={() => setSideMenuVisible(true)}
+        aria-label="사이드 메뉴 열기"
+      >
+        <Menu />
+      </button>
+      <div className={styles.brand}>
+        <Link to="/" className={styles.brandLink}>
+          {siteTitleInParagraph ? (
+            <p className="sr-only">{title}</p>
+          ) : (
+            <h1 className="sr-only">{title}</h1>
+          )}
+          <img src="/logo.svg" alt="Logo" />
+        </Link>
       </div>
+      {sideMenuVisible && (
+        <SideMenu
+          title={title}
+          copyright={copyright}
+          categoriesGroup={data.categoriesGroup}
+          setVisible={setSideMenuVisible}
+        />
+      )}
     </nav>
   )
 }

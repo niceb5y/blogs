@@ -41,6 +41,7 @@ const PageIndex = ({
         pageCurrent={pageCurrent}
         pageTotal={pageTotal}
         pagePrefix=""
+        title="All Posts"
       />
     </Layout>
   )

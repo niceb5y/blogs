@@ -1,12 +1,17 @@
 import Header from './header'
 import Footer from './footer'
-import * as styles from './layout.module.scss'
+import * as styles from './layout.module.css'
 
-interface LayoutProps {}
+interface LayoutProps {
+  siteTitleInParagraph?: boolean
+}
 
-const Layout = ({ children }: React.PropsWithChildren<LayoutProps>) => (
+const Layout = ({
+  children,
+  siteTitleInParagraph = false,
+}: React.PropsWithChildren<LayoutProps>) => (
   <div className={styles.root}>
-    <Header />
+    <Header siteTitleInParagraph={siteTitleInParagraph} />
     <main>{children}</main>
     <Footer />
   </div>

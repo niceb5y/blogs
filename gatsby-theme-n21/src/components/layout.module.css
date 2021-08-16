@@ -5,6 +5,5 @@
   padding-left: calc(env(safe-area-inset-left) + 8px);
   padding-right: calc(env(safe-area-inset-right) + 8px);
   padding-bottom: env(safe-area-inset-bottom);
-  margin: 0 auto;
-  box-sizing: border-box;
+  @apply mx-auto;
 }

@@ -1,0 +1,35 @@
+.header {
+  @apply mb-4;
+}
+
+.header h1 {
+  @apply mt-4 text-lg font-medium;
+}
+
+.header p {
+  @apply m-0;
+}
+
+.header .category {
+  @apply text-primary-500 hover:underline mr-2;
+}
+
+.header .date {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+.footer {
+  @apply mt-16 text-gray-500;
+}
+
+.footer div {
+  @apply mb-4;
+}
+
+.footer a {
+  @apply hover:underline;
+}
+
+.icon {
+  @apply inline-block mr-2;
+}

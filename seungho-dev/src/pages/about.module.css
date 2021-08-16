@@ -1,0 +1,58 @@
+.card {
+  background-color: rgb(247, 223, 30);
+  box-shadow: 0 2.2px 2.2px rgba(0, 0, 0, 0.02),
+    0 5.3px 5.3px rgba(0, 0, 0, 0.028), 0 10px 10px rgba(0, 0, 0, 0.035),
+    0 17.9px 17.9px rgba(0, 0, 0, 0.042), 0 33.4px 33.4px rgba(0, 0, 0, 0.05),
+    0 80px 80px rgba(0, 0, 0, 0.07);
+  @apply rounded text-black my-0 mx-auto p-5 w-72 h-44 flex flex-col;
+}
+
+.card img {
+  @apply mt-auto h-20 w-20 rounded;
+}
+
+.card h1 {
+  @apply text-xl mb-0 mt-2;
+}
+.card p {
+  @apply my-0 text-gray-700;
+}
+
+.card div {
+  @apply w-full flex justify-between;
+}
+
+.card svg {
+  @apply mr-1;
+}
+
+.cardBlock {
+  @apply flex flex-col justify-center h-72 overflow-hidden;
+}
+
+.block {
+  @apply pt-6 pb-10;
+}
+
+.block h1 {
+  @apply text-xl font-medium;
+}
+
+.block ul {
+  @apply ml-4;
+}
+
+.button {
+  @apply inline-block mt-2 mr-2 py-1 px-2 font-medium rounded shadow-md transition-colors bg-gray-400 hover:bg-gray-500 active:bg-gray-600 text-gray-900;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    box-shadow: 0 2.2px 2.2px rgba(247, 223, 30, 0.02),
+      0 5.3px 5.3px rgba(247, 223, 30, 0.028),
+      0 10px 10px rgba(247, 223, 30, 0.035),
+      0 17.9px 17.9px rgba(247, 223, 30, 0.042),
+      0 33.4px 33.4px rgba(247, 223, 30, 0.05),
+      0 80px 80px rgba(247, 223, 30, 0.07);
+  }
+}
