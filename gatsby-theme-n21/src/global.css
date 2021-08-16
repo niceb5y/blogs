@@ -43,3 +43,7 @@ article section strong {
 article section a {
   @apply text-primary-500 hover:underline;
 }
+
+article section p {
+  @apply mb-2;
+}
