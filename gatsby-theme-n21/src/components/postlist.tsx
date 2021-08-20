@@ -35,6 +35,7 @@ const PostList = ({
           <span className={styles.date}>{node.frontmatter.date}</span>
         </p>
         <p
+          className={styles.desc}
           dangerouslySetInnerHTML={{
             __html: node.frontmatter.description,
           }}

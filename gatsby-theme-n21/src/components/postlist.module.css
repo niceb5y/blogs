@@ -26,6 +26,10 @@
   @apply text-gray-400 dark:text-gray-500;
 }
 
+.card .desc {
+  @apply text-gray-600 dark:text-gray-400;
+}
+
 .pagination {
   @apply text-center mt-4;
 }
