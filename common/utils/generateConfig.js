@@ -10,9 +10,6 @@ module.exports = (config, dirname) => ({
     },
     copyright: config.copyright,
   },
-  flags: {
-    THE_FLAG: false,
-  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -120,8 +117,6 @@ module.exports = (config, dirname) => ({
         name: config.title,
         short_name: config.title,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#0075C1`,
         display: `minimal-ui`,
         icon: `content/assets/icon.png`,
       },

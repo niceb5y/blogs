@@ -19,6 +19,16 @@ const HTML = (props: HTMLProps) => (
       <meta name="referrer" content="origin-when-cross-origin" />
       <link rel="alternate" type="application/rss+xml" href="/index.xml" />
       {props.headComponents}
+      <meta
+        name="theme-color"
+        content="#ffffff"
+        media="(prefers-color-scheme: light)"
+      />
+      <meta
+        name="theme-color"
+        content="#171717"
+        media="(prefers-color-scheme: dark)"
+      />
     </head>
     <body {...props.bodyAttributes}>
       {props.preBodyComponents}

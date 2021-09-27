@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby'
-import { resolve } from 'url'
+import { resolve } from '../../utils/url'
 
 import { Site } from '../../entities'
 

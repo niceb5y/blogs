@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
-import { resolve } from 'url'
+import { resolve } from '../utils/url'
 
 import { Site, Asset } from '../entities'
 
@@ -16,30 +16,28 @@ interface SEOProps {
 }
 
 function SEO({ description, lang = 'ko', meta = [], title, image }: SEOProps) {
-  const {
-    site,
-    defaultImage,
-  }: { site: Site; defaultImage: Asset } = useStaticQuery(
-    graphql`
-      query seoQuery {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
+  const { site, defaultImage }: { site: Site; defaultImage: Asset } =
+    useStaticQuery(
+      graphql`
+        query seoQuery {
+          site {
+            siteMetadata {
+              title
+              description
+              author
+              siteUrl
+            }
           }
-        }
-        defaultImage: allFile(filter: { relativePath: { eq: "image.png" } }) {
-          edges {
-            node {
-              publicURL
+          defaultImage: allFile(filter: { relativePath: { eq: "image.png" } }) {
+            edges {
+              node {
+                publicURL
+              }
             }
           }
         }
-      }
-    `
-  )
+      `
+    )
 
   const metaDescription = description || site.siteMetadata.description
   const metaImage = resolve(
