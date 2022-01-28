@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: ['../gatsby-theme-n21/**/*.js', '../gatsby-theme-n21/src/**/*.tsx'],
+  content: ['../gatsby-theme-n21/**/*.js', '../gatsby-theme-n21/src/**/*.tsx'],
   darkMode: 'media',
   theme: {
     colors: {
@@ -9,7 +9,7 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.trueGray,
+      gray: colors.neutral,
     },
     fontFamily: {
       sans: [
