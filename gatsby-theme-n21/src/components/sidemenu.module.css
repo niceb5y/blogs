@@ -27,7 +27,7 @@
 }
 
 .about {
-  @apply text-right;
+  @apply text-right mr-2 mb-2;
 }
 
 .header {
@@ -44,4 +44,8 @@
 
 .bg {
   @apply fixed z-10 inset-0 backdrop-filter backdrop-brightness-75 backdrop-blur;
+}
+
+.btnClose {
+  @apply mr-2 mt-2;
 }

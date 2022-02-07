@@ -10,7 +10,7 @@ interface HeaderProps {
 }
 
 const Header = ({ siteTitleInParagraph }: HeaderProps) => {
-  const [sideMenuVisible, setSideMenuVisible] = useState(false)
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
 
   const data: {
     site: Site
@@ -36,7 +36,7 @@ const Header = ({ siteTitleInParagraph }: HeaderProps) => {
   return (
     <nav className={styles.root}>
       <button
-        onClick={() => setSideMenuVisible(true)}
+        onClick={() => setIsSideMenuOpen(true)}
         aria-label="사이드 메뉴 열기"
       >
         <Menu />
@@ -51,14 +51,13 @@ const Header = ({ siteTitleInParagraph }: HeaderProps) => {
           <img src="/logo.svg" alt="Logo" />
         </Link>
       </div>
-      {sideMenuVisible && (
-        <SideMenu
-          title={title}
-          copyright={copyright}
-          categoriesGroup={data.categoriesGroup}
-          setVisible={setSideMenuVisible}
-        />
-      )}
+      <SideMenu
+        title={title}
+        copyright={copyright}
+        categoriesGroup={data.categoriesGroup}
+        isOpen={isSideMenuOpen}
+        setIsOpen={setIsSideMenuOpen}
+      />
     </nav>
   )
 }
