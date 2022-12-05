@@ -1,2 +1,2 @@
-require('prism-theme-one-dark/prism-onedark.css')
-require('./src/global.css')
+import 'prism-theme-one-dark/prism-onedark.css'
+import './src/global.css'

@@ -15,21 +15,19 @@ const Header = ({ siteTitleInParagraph }: HeaderProps) => {
   const data: {
     site: Site
     categoriesGroup: CategoriesGroup
-  } = useStaticQuery(graphql`
-    query headerQuery {
-      categoriesGroup: allMarkdownRemark(limit: 1000) {
-        group(field: frontmatter___categories) {
-          fieldValue
-        }
-      }
-      site {
-        siteMetadata {
-          title
-          copyright
-        }
-      }
+  } = useStaticQuery(graphql`query headerQuery {
+  categoriesGroup: allMarkdownRemark(limit: 1000) {
+    group(field: {frontmatter: {categories: SELECT}}) {
+      fieldValue
     }
-  `)
+  }
+  site {
+    siteMetadata {
+      title
+      copyright
+    }
+  }
+}`)
 
   const { title, copyright } = data.site.siteMetadata
 

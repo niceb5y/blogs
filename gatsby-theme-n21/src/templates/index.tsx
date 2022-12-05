@@ -49,29 +49,23 @@ const PageIndex = ({
 
 export default PageIndex
 
-export const indexQuery = graphql`
-  query indexQuery($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
+export const indexQuery = graphql`query indexQuery($skip: Int!, $limit: Int!) {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          frontmatter {
-            date(formatString: "YYYY-MM-DD")
-            title
-            url
-            description
-            categories
-          }
+  }
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: $limit, skip: $skip) {
+    edges {
+      node {
+        frontmatter {
+          date(formatString: "YYYY-MM-DD")
+          title
+          url
+          description
+          categories
         }
       }
     }
   }
-`
+}`

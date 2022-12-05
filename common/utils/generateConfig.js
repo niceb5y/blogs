@@ -84,26 +84,21 @@ module.exports = (config, dirname) => ({
                 })
               })
             },
-            query: `
-              {
-                allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  limit: 15
-                ) {
-                  edges {
-                    node {
-                      html
-                      frontmatter {
-                        title
-                        date
-                        url
-                        description
-                      }
-                    }
-                  }
-                }
-              }
-            `,
+            query: `{
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 15) {
+    edges {
+      node {
+        html
+        frontmatter {
+          title
+          date
+          url
+          description
+        }
+      }
+    }
+  }
+}`,
             output: '/index.xml',
             title: config.title,
             match: '^/blog/',
