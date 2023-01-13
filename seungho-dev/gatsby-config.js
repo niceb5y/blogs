@@ -6,7 +6,7 @@ const config = {
   description: '(일단은) 개발 블로그',
   siteUrl: 'https://seungho.dev/',
   twitter: 'niceb5y',
-  copyright: '© 2020-2022 Seungho Kim',
+  copyright: '© 2020-2023 Seungho Kim',
   trackingId: 'UA-157538967-1',
 }
 
