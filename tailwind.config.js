@@ -13,7 +13,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Pretendard',
+        'SUIT Variable',
         '-apple-system',
         'BlinkMacSystemFont',
         'system-ui',
