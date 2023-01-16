@@ -11,7 +11,7 @@ const About = () => (
                     <img src="/profile.jpg" alt="Profile photo"/>
                     <h1>Seungho Kim</h1>
                     <div>
-                        <p className="lead">Software Developer</p>
+                        <p className="lead">Software Engineer</p>
                         <a href="http://github.com/niceb5y" target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
