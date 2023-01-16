@@ -98,7 +98,7 @@ const About = () => (
         </div>
         <div className={styles.block}>
             <h1>Et cetera</h1>
-            <a href="https://moments.shk.im" className={styles.button} role="button">
+            <a href="https://moments.seungho.kim" className={styles.button} role="button">
                 Moments
             </a>
             <a href="https://blog.niceb5y.net" className={styles.button} role="button">
