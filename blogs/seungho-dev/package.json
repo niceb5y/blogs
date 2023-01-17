@@ -6,15 +6,15 @@
   "author": "Seungho kim <niceb5y@gmail.com>",
   "dependencies": {
     "gatsby": "^5.4.1",
-    "common": "^1.0.0"
+    "common": "*"
   },
   "license": "UNLICENSED",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop -p 3000",
+    "dev": "gatsby develop -p 3001",
     "format": "prettier --write \"{content,src}/**/*.{js,jsx,json,md,tsx}\"",
-    "start": "gatsby develop -p 3000",
+    "start": "gatsby develop -p 3001",
     "serve": "gatsby serve"
   }
 }

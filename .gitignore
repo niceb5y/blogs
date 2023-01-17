@@ -241,3 +241,6 @@ public
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node,jetbrains+all
+
+# TurboRepo
+.turbo
