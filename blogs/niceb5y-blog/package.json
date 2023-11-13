@@ -6,7 +6,7 @@
   "author": "Seungho kim <niceb5y@gmail.com>",
   "dependencies": {
     "common": "*",
-    "gatsby": "^5.4.1"
+    "gatsby": "^5.12.9"
   },
   "license": "UNLICENSED",
   "main": "n/a",
