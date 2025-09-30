@@ -2,8 +2,8 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
-    '../../packages/gatsby-theme-n21/**/*.js',
-    '../../packages/gatsby-theme-n21/src/**/*.tsx',
+    './packages/gatsby-theme-n21/**/*.js',
+    './packages/gatsby-theme-n21/src/**/*.tsx',
   ],
   darkMode: 'media',
   theme: {

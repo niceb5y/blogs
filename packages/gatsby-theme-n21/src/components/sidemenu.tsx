@@ -2,7 +2,12 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
 import { X } from 'react-feather'
 import clsx from 'clsx'
-import { Dialog } from '@headlessui/react'
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from '@headlessui/react'
 import { CategoriesGroup } from '../entities'
 import * as styles from './sidemenu.module.css'
 
@@ -36,8 +41,8 @@ const SideMenu = ({
       onClose={() => setIsOpen(false)}
       initialFocus={firstLinkRef}
     >
-      <Dialog.Overlay className={styles.bg} />
-      <div className={styles.menu}>
+      <DialogBackdrop className={styles.bg} />
+      <DialogPanel className={styles.menu}>
         <div className={styles.menuWrapper}>
           <div className={styles.header}>
             <button
@@ -51,7 +56,7 @@ const SideMenu = ({
           </div>
           <div className={styles.title}>
             <img src="/logo.svg" alt={title} />
-            <Dialog.Title className="sr-only">사이드 메뉴</Dialog.Title>
+            <DialogTitle className="sr-only">사이드 메뉴</DialogTitle>
           </div>
           <h2 className={styles.listTitle}>카테고리</h2>
           <ul className={styles.list} aria-label="카테고리">
@@ -79,7 +84,7 @@ const SideMenu = ({
             </a>
           </div>
         </div>
-      </div>
+      </DialogPanel>
     </Dialog>
   )
 }

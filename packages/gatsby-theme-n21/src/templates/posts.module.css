@@ -1,3 +1,5 @@
+@reference '../global.css';
+
 .header {
   @apply mb-4;
 }

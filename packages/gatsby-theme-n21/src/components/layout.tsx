@@ -4,12 +4,10 @@ import * as styles from './layout.module.css'
 
 interface LayoutProps {
   siteTitleInParagraph?: boolean
+  children?: React.ReactNode
 }
 
-const Layout = ({
-  children,
-  siteTitleInParagraph = false,
-}: React.PropsWithChildren<LayoutProps>) => (
+const Layout = ({ children, siteTitleInParagraph = false }: LayoutProps) => (
   <div className={styles.root}>
     <Header siteTitleInParagraph={siteTitleInParagraph} />
     <main>{children}</main>

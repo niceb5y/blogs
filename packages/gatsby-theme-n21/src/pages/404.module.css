@@ -1,3 +1,5 @@
+@reference '../global.css';
+
 .root {
   @apply my-36;
 }

@@ -1,8 +1,13 @@
+@reference '../../../../packages/gatsby-theme-n21/src/global.css';
+
 .card {
   background-color: rgb(247, 223, 30);
-  box-shadow: 0 2.2px 2.2px rgba(0, 0, 0, 0.02),
-    0 5.3px 5.3px rgba(0, 0, 0, 0.028), 0 10px 10px rgba(0, 0, 0, 0.035),
-    0 17.9px 17.9px rgba(0, 0, 0, 0.042), 0 33.4px 33.4px rgba(0, 0, 0, 0.05),
+  box-shadow:
+    0 2.2px 2.2px rgba(0, 0, 0, 0.02),
+    0 5.3px 5.3px rgba(0, 0, 0, 0.028),
+    0 10px 10px rgba(0, 0, 0, 0.035),
+    0 17.9px 17.9px rgba(0, 0, 0, 0.042),
+    0 33.4px 33.4px rgba(0, 0, 0, 0.05),
     0 80px 80px rgba(0, 0, 0, 0.07);
   @apply rounded text-black my-0 mx-auto p-5 w-72 h-44 flex flex-col;
 }
@@ -51,7 +56,8 @@
 
 @media (prefers-color-scheme: dark) {
   .card {
-    box-shadow: 0 2.2px 2.2px rgba(247, 223, 30, 0.02),
+    box-shadow:
+      0 2.2px 2.2px rgba(247, 223, 30, 0.02),
       0 5.3px 5.3px rgba(247, 223, 30, 0.028),
       0 10px 10px rgba(247, 223, 30, 0.035),
       0 17.9px 17.9px rgba(247, 223, 30, 0.042),

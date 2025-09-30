@@ -10,7 +10,7 @@ const PostList = ({
   pagePrefix,
   title,
 }: {
-  list: Array<Edge>
+  list: Edge[]
   pageCurrent: number
   pageTotal: number
   pagePrefix: string

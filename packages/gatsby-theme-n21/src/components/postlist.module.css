@@ -1,3 +1,5 @@
+@reference '../global.css';
+
 .pageTitle {
   @apply text-lg text-gray-500 mb-5;
 }

@@ -1,9 +1,9 @@
 @import url('https://cdn.seungho.kim/fonts/suit/SUIT-Variable.css');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@config '../../../tailwind.config.js';
 
 html {
   @apply dark:bg-gray-900;

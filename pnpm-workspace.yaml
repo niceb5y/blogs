@@ -1,3 +1,8 @@
 packages:
   - blogs/*
   - packages/*
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - gatsby
+  - sharp
