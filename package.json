@@ -1,10 +1,6 @@
 {
   "name": "blogs",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "blogs/*"
-  ],
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "autoprefixer": "^10.4.16",
@@ -67,5 +63,5 @@
     "build": "turbo build",
     "dev": "turbo dev"
   },
-  "packageManager": "yarn@3.6.2"
+  "packageManager": "pnpm@10.14.0"
 }
