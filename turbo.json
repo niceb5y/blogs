@@ -1,6 +1,11 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "globalDependencies": [
+    "postcss.config.js",
+    "tsconfig.json",
+    "tailwind.config.js"
+  ],
+  "tasks": {
     "build": {
       "dependsOn": [
         "^build"
@@ -13,10 +18,5 @@
       "cache": false,
       "persistent": true
     }
-  },
-  "globalDependencies": [
-    "postcss.config.js",
-    "tsconfig.json",
-    "tailwind.config.js"
-  ]
+  }
 }
