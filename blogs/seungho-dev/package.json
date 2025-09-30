@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Seungho kim <niceb5y@gmail.com>",
   "dependencies": {
-    "common": "*",
+    "common": "workspace:",
     "gatsby": "^5.12.9"
   },
   "license": "UNLICENSED",
