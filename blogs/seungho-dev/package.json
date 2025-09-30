@@ -6,7 +6,8 @@
   "author": "Seungho kim <niceb5y@gmail.com>",
   "dependencies": {
     "common": "workspace:",
-    "gatsby": "^5.12.9"
+    "gatsby": "^5.12.9",
+    "gatsby-theme-n21": "workspace:"
   },
   "license": "UNLICENSED",
   "main": "n/a",
