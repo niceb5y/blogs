@@ -1,4 +1,4 @@
-@import url('https://cdnx.shk.im/fonts/suit/SUIT-Variable.css');
+@import url('https://cdn.seungho.kim/fonts/suit/SUIT-Variable.css');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
 
 @tailwind base;
@@ -16,8 +16,12 @@ body {
 
 code[class*='language-'],
 pre[class*='language-'] {
-  -webkit-font-feature-settings: 'liga' on, 'calt' on;
-  font-feature-settings: 'liga' on, 'calt' on;
+  -webkit-font-feature-settings:
+    'liga' on,
+    'calt' on;
+  font-feature-settings:
+    'liga' on,
+    'calt' on;
   font-size: 1em;
   @apply font-light font-mono;
 }
